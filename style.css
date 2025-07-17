@@ -311,3 +311,145 @@ footer {
         border-bottom: none;
     }
 }
+.job-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid for job cards */
+    gap: 30px; /* Space between job cards */
+    margin-top: 30px;
+    text-align: left; /* Align text within job cards to the left */
+}
+
+/* Individual Job Card Styles */
+.job-card {
+    background: #fdfdfd;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Consistent shadow with other content boxes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: #77aaff 6px solid; /* Accent bar on the left, matching service items */
+    display: flex; /* Use flexbox to organize content vertically */
+    flex-direction: column;
+}
+
+.job-card:hover {
+    transform: translateY(-8px); /* More pronounced lift effect on hover */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+
+.job-card h3 {
+    color: #333;
+    font-size: 1.8em; /* Slightly larger title */
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.job-card .job-meta {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.job-card .job-description {
+    font-size: 1.05em;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allows description to take up available space, pushing button to bottom */
+}
+
+.job-card .job-requirements {
+    margin-top: 15px;
+    margin-bottom: 25px; /* Space before button */
+}
+
+.job-card .job-requirements h4 {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee; /* Subtle separator */
+    padding-bottom: 5px;
+}
+
+.job-card .job-requirements ul {
+    list-style: disc; /* Use standard bullet points */
+    margin-left: 20px; /* Indent bullets */
+    padding: 0;
+    font-size: 0.95em;
+    color: #666;
+}
+
+.job-card .job-requirements ul li {
+    margin-bottom: 5px;
+    line-height: 1.4;
+    background: none; /* Override previous list item background */
+    border: none; /* Override previous list item border */
+    box-shadow: none; /* Override previous list item shadow */
+    padding: 0; /* Override previous list item padding */
+    text-align: left;
+}
+
+/* Apply Button within Job Cards */
+.apply-button {
+    display: inline-block;
+    background-color: #77aaff; /* Your accent blue */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.95em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start; /* Align button to the left within flex container */
+}
+
+.apply-button:hover {
+    background-color: #5599ee;
+    transform: translateY(-2px);
+}
+
+/* Note at the bottom of hiring section */
+.hiring-note {
+    font-size: 1.1em;
+    margin-top: 40px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.hiring-note a {
+    color: #77aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.hiring-note a:hover {
+    color: #5599ee;
+    text-decoration: underline;
+}
+
+/* --- Responsive adjustments for Hiring Section --- */
+@media (max-width: 768px) {
+    .job-card {
+        padding: 20px;
+    }
+    .job-card h3 {
+        font-size: 1.6em;
+    }
+    .job-card .job-description {
+        font-size: 1em;
+    }
+    .apply-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .hiring-note {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .job-listings {
+        grid-template-columns: 1fr; /* Stack job cards on very small screens */
+    }
+}
