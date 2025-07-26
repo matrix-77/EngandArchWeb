@@ -22,7 +22,7 @@ body {
     position: relative;
     width: 100%;
     height: 100vh; /* Full viewport height */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../images/hero-background.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://www.ecslimited.com/wp-content/uploads/2022/03/one-stop-shop-1600x600.jpg') no-repeat center center/cover;
     /* IMPORTANT: Replace 'hero-background.jpg' with your image path */
     display: flex;
     justify-content: center;
@@ -61,7 +61,7 @@ body {
     border-radius: 50px; /* Pill-shaped button */
     font-size: 1.1em;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 10s ease, transform 10s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
