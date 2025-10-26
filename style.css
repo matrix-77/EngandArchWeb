@@ -1,0 +1,455 @@
+/* General Body and Container Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* A more modern sans-serif font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f8f8f8; /* Lighter background */
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+.container {
+    width: 90%; /* Wider container */
+    max-width: 1200px; /* Max width for larger screens */
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('D:/1 Stop Engineers & Architects/Big.jpg') no-repeat center center/cover;
+    /* IMPORTANT: Replace 'hero-background.jpg' with your image path */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.hero-content {
+    z-index: 1; /* Ensure content is above the overlay */
+    padding: 20px;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4.5em; /* Larger, impactful heading */
+    margin-bottom: 20px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow for readability */
+}
+
+.hero p {
+    font-size: 1.8em; /* Larger motto */
+    margin-bottom: 40px;
+    font-weight: 300; /* Lighter font weight */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #77aaff; /* Your accent blue */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px; /* Pill-shaped button */
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 10s ease, transform 10s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-button:hover {
+    background-color: #5599ee; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Adjustments for the anchor link position */
+#services-tab-anchor {
+    position: relative;
+    top: -80px; /* Adjust this value if you add a sticky header later */
+    visibility: hidden; /* Hide the anchor div itself */
+    height: 0; /* Don't take up space */
+}
+
+
+/* Tab Button Container */
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; /* Space from hero section */
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* More prominent shadow */
+    overflow: hidden;
+    border: none; /* Remove previous border */
+}
+
+/* Individual Tab Button Styles */
+.tab-button {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 18px 30px; /* More padding */
+    font-size: 1.1em;
+    font-weight: 500; /* Slightly bolder */
+    color: #555;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    flex-grow: 1;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 0.5px;
+}
+
+.tab-button:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Active Tab Button Style */
+.tab-button.active {
+    background-color: #77aaff; /* Your accent blue */
+    color: white;
+    font-weight: bold;
+    box-shadow: inset 0 -3px 0 0 #333; /* Subtle underline effect for active tab */
+    position: relative; /* For the underline */
+}
+
+/* Tab Content Styles */
+.tab-content {
+    display: none;
+    padding: 50px 30px; /* More padding */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    margin-bottom: 40px; /* Space before footer */
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-content h2 {
+    color: #333;
+    font-size: 2.5em; /* Larger heading */
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tab-content h2::after {
+    content: '';
+    display: block;
+    width: 60px; /* Wider underline */
+    height: 4px; /* Thicker underline */
+    background: #77aaff;
+    margin: 15px auto 0; /* More space */
+    border-radius: 2px;
+}
+
+/* Services List Styles (within tab content) */
+#services ul {
+    list-style: none;
+    padding: 0;
+    display: grid; /* Use CSS Grid for a more structured layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    margin-top: 30px;
+}
+
+#services ul li {
+    background: #fdfdfd;
+    padding: 25px; /* More padding */
+    border-left: #77aaff 6px solid; /* Thicker accent bar */
+    text-align: left;
+    font-size: 1.1em;
+    border-radius: 8px; /* More rounded corners */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* More noticeable shadow */
+    transition: transform 0.3s ease;
+}
+
+#services ul li:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+
+
+/* Contact Info Styles (within tab content) */
+#contact .contact-info p {
+    margin: 10px 0; /* More space */
+    font-size: 1.15em;
+    line-height: 1.8;
+}
+
+#contact .contact-info strong {
+    color: #555;
+}
+
+#contact .contact-info a {
+    color: #77aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#contact .contact-info a:hover {
+    color: #5599ee;
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background: #222; /* Darker footer */
+    color: #ccc;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 0; /* Footer directly after content */
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3.5em;
+    }
+    .hero p {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .hero {
+        height: 70vh; /* Adjust hero height for smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 2.8em;
+    }
+
+    .hero p {
+        font-size: 1.3em;
+    }
+
+    .hero-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .tab-button {
+        padding: 15px 20px;
+        font-size: 1em;
+    }
+
+    .tab-content {
+        padding: 30px 15px;
+    }
+
+    .tab-content h2 {
+        font-size: 2em;
+    }
+
+    #services ul {
+        grid-template-columns: 1fr; /* Stack service items on small screens */
+    }
+
+    #services ul li {
+        font-size: 1em;
+    }
+
+    #contact .contact-info p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 60vh;
+    }
+    .hero h1 {
+        font-size: 2.2em;
+    }
+    .hero p {
+        font-size: 1.1em;
+    }
+    .tab-buttons {
+        flex-direction: column;
+        border-radius: 8px; /* Restore rounded corners for the container */
+    }
+    .tab-button {
+        border-right: none;
+        border-bottom: 1px solid #eee; /* Separator for stacked buttons */
+        border-radius: 0;
+    }
+    .tab-button:first-child {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .tab-button:last-child {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-bottom: none;
+    }
+}
+.job-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid for job cards */
+    gap: 30px; /* Space between job cards */
+    margin-top: 30px;
+    text-align: left; /* Align text within job cards to the left */
+}
+
+/* Individual Job Card Styles */
+.job-card {
+    background: #fdfdfd;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Consistent shadow with other content boxes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: #77aaff 6px solid; /* Accent bar on the left, matching service items */
+    display: flex; /* Use flexbox to organize content vertically */
+    flex-direction: column;
+}
+
+.job-card:hover {
+    transform: translateY(-8px); /* More pronounced lift effect on hover */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+
+.job-card h3 {
+    color: #333;
+    font-size: 1.8em; /* Slightly larger title */
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.job-card .job-meta {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.job-card .job-description {
+    font-size: 1.05em;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allows description to take up available space, pushing button to bottom */
+}
+
+.job-card .job-requirements {
+    margin-top: 15px;
+    margin-bottom: 25px; /* Space before button */
+}
+
+.job-card .job-requirements h4 {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee; /* Subtle separator */
+    padding-bottom: 5px;
+}
+
+.job-card .job-requirements ul {
+    list-style: disc; /* Use standard bullet points */
+    margin-left: 20px; /* Indent bullets */
+    padding: 0;
+    font-size: 0.95em;
+    color: #666;
+}
+
+.job-card .job-requirements ul li {
+    margin-bottom: 5px;
+    line-height: 1.4;
+    background: none; /* Override previous list item background */
+    border: none; /* Override previous list item border */
+    box-shadow: none; /* Override previous list item shadow */
+    padding: 0; /* Override previous list item padding */
+    text-align: left;
+}
+
+/* Apply Button within Job Cards */
+.apply-button {
+    display: inline-block;
+    background-color: #77aaff; /* Your accent blue */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.95em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start; /* Align button to the left within flex container */
+}
+
+.apply-button:hover {
+    background-color: #5599ee;
+    transform: translateY(-2px);
+}
+
+/* Note at the bottom of hiring section */
+.hiring-note {
+    font-size: 1.1em;
+    margin-top: 40px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.hiring-note a {
+    color: #77aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.hiring-note a:hover {
+    color: #5599ee;
+    text-decoration: underline;
+}
+
+/* --- Responsive adjustments for Hiring Section --- */
+@media (max-width: 768px) {
+    .job-card {
+        padding: 20px;
+    }
+    .job-card h3 {
+        font-size: 1.6em;
+    }
+    .job-card .job-description {
+        font-size: 1em;
+    }
+    .apply-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .hiring-note {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .job-listings {
+        grid-template-columns: 1fr; /* Stack job cards on very small screens */
+    }
+}
