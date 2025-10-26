@@ -22,7 +22,7 @@ body {
     position: relative;
     width: 100%;
     height: 100vh; /* Full viewport height */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://instagram.fjlr1-1.fna.fbcdn.net/v/t51.2885-19/350819629_740985111048015_8380224237433257453_n.jpg?stp=dst-jpg_s320x320_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDEzLmMyIn0&_nc_ht=instagram.fjlr1-1.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2QEz4auHtNSF7sFktTcP4AaI0qaIGpouht2ttWaHcNA-piKhFltUsNdAF0UJUg-A3_E&_nc_ohc=Ssu_foZ9FzAQ7kNvwF-3euY&_nc_gid=v5tT_xsgbb9RRhAzd88stA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Afer0uo1hNmuFYoiT5bh887m-Mg3zAMk2wJ6aWX6vyuBwg&oe=690399FB&_nc_sid=8b3546") no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("Big.jpg") no-repeat center center/cover;
     /* IMPORTANT: Replace 'hero-background.jpg' with your image path */
     display: flex;
     justify-content: center;
@@ -454,5 +454,6 @@ footer {
     }
 
 }
+
 
 
