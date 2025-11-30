@@ -1,8 +1,11 @@
 About - EngandArchWeb is a frontend template for engineering and architecture-related web content. It's optimized for layout and visual presentation using modern CSS techniques, semantic HTML, and lightweight JavaScript.
 
 Tech stack - HTML — semantic structure and content
+
 CSS — layout, responsive design, theming (primary language)
+
 JavaScript — interactivity, small UI behaviors
+
 
 Use cases - Personal portfolio for architects/engineers
 Project showcases and case studies
