@@ -26,6 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    // Get the current year
+    const currentYear = new Date().getFullYear();
+    // Insert it into the span with id="year"
+    document.getElementById("year").textContent = currentYear;
 
     // Optional: If you want a specific tab to be active on page load
     // This is already handled by setting 'active' classes in HTML,
@@ -43,4 +47,5 @@ document.addEventListener('DOMContentLoaded', function() {
             initialActiveContent.classList.add('active'); // Then show the correct one
         }
     }
+
 });
